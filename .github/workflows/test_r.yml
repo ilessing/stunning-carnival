@@ -14,8 +14,10 @@ jobs:
      - uses: r-lib/actions/setup-r@v1
      - name: install R packages
        run: Rscript -e 'install.packages("here")'
-     - name: Run 3 lines of R script
+     - name: Run 1 lines of R script
        run: Rscript -e 'fileConn<-file("deletethis.txt")'
+     - name: Run a second line of R script
        run: Rscript -e 'writeLines(as.character(Sys.time()), fileConn)'
+     - name: Run a third line of R script
        run: Rscript -e 'close(fileConn)'
 
