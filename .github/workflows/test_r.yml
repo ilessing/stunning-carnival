@@ -12,4 +12,4 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
     name: Run temp R script
     working-directory: .github/workflows
-    run: Rscript -e 'temp.r'
+    run: Rscript -e '.github/workflows/temp.r'
