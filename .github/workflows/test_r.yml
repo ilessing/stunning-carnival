@@ -12,5 +12,7 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - uses: r-lib/actions/setup-r@v1
+     - name: install R packages
+       run: Rscript -e 'install.packages("here")'
      - name: Run temp R script
        run: Rscript -e 'temp.r'
