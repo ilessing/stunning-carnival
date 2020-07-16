@@ -11,4 +11,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: r-lib/actions/setup-r@v1
       - name: Run temp R script
-        run: Rscript -e 'temp.r'
+      - working-directory: .github/workflows
+      - run: Rscript -e 'temp.r'
