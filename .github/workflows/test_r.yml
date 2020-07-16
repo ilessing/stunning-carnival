@@ -15,4 +15,4 @@ jobs:
      - name: install R packages
        run: Rscript -e 'install.packages("here")'
      - name: Run temp R script
-       run: Rscript -e 'temp.r'
+       run: Rscript -e './temp.r'
