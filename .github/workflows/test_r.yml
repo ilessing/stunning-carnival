@@ -16,3 +16,6 @@ jobs:
        run: Rscript -e 'install.packages("here")'
      - name: source a temp R script 
        run: Rscript -e 'source("temp.r")'
+     - name: render R-markdown to regular R-markdown
+       run: Rscript -e 'knitr::knit("paper1.Rmd", output = "paper1.md")'
+       
